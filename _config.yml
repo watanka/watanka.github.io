@@ -84,10 +84,10 @@ content:
   - title: Certificates
     layout: text
     content: |
-      - **Certified Kubernetes Administrator (CNCF)** - 2023.05
-      - **SQLD (한국데이터산업진흥원)** - 2022.10
-      - **AWS Cloud Practitioner (AWS)** - 2021.12
-      - **빅데이터 분석기사 (한국산업인력공단)** - 2022.07
+      - **Certified Kubernetes Administrator (CNCF)** - 2024.09
+      - **SQLD (한국데이터산업진흥원)** - 2024.08
+      - **AWS Cloud Practitioner (AWS)** - 2024.06
+      - **빅데이터 분석기사 (한국데이터산업진흥원)** - 2022.12
 
   - title: ExtraCurricular
     layout: list
