@@ -9,7 +9,6 @@ version: 2
 name: 신은성
 title: Software Engineer
 email: eunsung.shin@gmail.com
-website: www.github.com/watanka
 
 # Dark Mode (true/false/never)
 darkmode: false
@@ -30,24 +29,6 @@ content:
     layout: list
     content:
       - layout: top-middle
-        title: 반려동물 진료비 예측 서비스 개발
-        link: www.github.com/petpins
-        description: |
-          반려동물 보험 사이트에서 등록된 반려견 건강 정보를 바탕으로 진료비를 예측하는 시스템을 개발했습니다.
-          - 기존 보험청구 처리 시스템과 연동하여 AI 백엔드 서버 개발
-          - 모델 학습 파이프라인 구성 및 최종 모델 정확도 90% 달성
-          - nginx, docker, github action을 통한 무중단 배포 구현
-          
-      - layout: top-middle
-        title: 문서 인식 OCR 제품 개발
-        link: www.github.com/agilesoda
-        description: |
-          일 6만건 이상의 문서 정보 자동화를 위한 텍스트 탐지 모델을 개발했습니다.
-          - 텍스트 탐지 모델 정확도 93% 달성
-          - Triton Inference Server로 서빙 효율 개선
-          - 손글씨 인식률 4% 개선을 위한 semi-supervised learning 기법 적용
-
-      - layout: top-middle
         title: 콘서트 예약 시스템
         link: www.github.com/concert-reservation
         description: |
@@ -56,36 +37,49 @@ content:
           - Redis의 Sorted Set과 JWT Token을 활용한 대기열 구현
           - Redisson 분산락을 적용하여 데이터 정합성 보장
 
-  - title: Experience
-    layout: list
+  - title: Experiences
+    layout: split
     content:
-      - layout: left
-        title: 펫핀스
-        sub_title: 머신러닝 엔지니어
-        caption: 2024.02 - 2024.08
-        description: |
-          반려동물 진료비 예측 서비스 개발 프로젝트 진행.
-          - AI 백엔드 서버 기획부터 개발까지 담당
-          - Mlflow로 모델 재학습 결과 모니터링 및 무중단 배포 구현
+      - layout: left-right
+        left:
+          title: 반려동물 진료비 예측 서비스 개발
+          link: www.github.com/petpins
+          description: |
+            반려동물 보험 사이트에서 등록된 반려견 건강 정보를 바탕으로 진료비를 예측하는 시스템을 개발했습니다.
+        right:
+          description: |
+            - 기존 보험청구 처리 시스템과 연동하여 AI 백엔드 서버 개발
+            - 모델 학습 파이프라인 구성 및 최종 모델 정확도 90% 달성
+            - nginx, docker, github action을 통한 무중단 배포 구현
 
-      - layout: left
-        title: 애자일소다
-        sub_title: 머신러닝 엔지니어
-        caption: 2020.07 - 2023.01
-        description: |
-          B2B OCR 제품 개발 참여.
-          - 텍스트 탐지 모델 정확도 93% 달성
-          - Triton Inference Server 도입을 통한 서빙 효율 개선
-          - 손글씨 인식률 개선을 위한 데이터 수집 자동화
-
-      - layout: left
-        title: 애자일소다
-        sub_title: 머신러닝 엔지니어 인턴
-        caption: 2019.08 - 2020.02
-        description: |
-          이미지 기반 사고 수리비 예측 프로젝트.
-          - CNN 모델을 활용한 이미지 분류 모델 개발
-          - 91% 정확도 달성
+      - layout:
+        left:
+          title: 애자일소다
+          sub_title: 머신러닝 엔지니어
+          caption: 2020.07 - 2023.01
+          link: www.github.com/petpins
+          description: |
+            B2B OCR 제품 개발 참여
+        right:
+          description: |
+            - 일 6만건 이상의 문서 정보 자동화를 위한 텍스트 탐지 모델을 개발했습니다.
+            - 텍스트 탐지 모델 정확도 93% 달성
+            - Triton Inference Server로 서빙 효율 개선
+            - 손글씨 인식률 4% 개선을 위한 semi-supervised learning 기법 적용
+            - 손글씨 인식률 개선을 위한 데이터 수집 자동화
+          
+      - layout:
+        left:
+          title: 애자일소다
+          sub_title: 머신러닝 엔지니어 인턴
+          caption: 2019.08 - 2020.02
+          link: www.github.com/agilesoda
+          description: |
+            이미지 기반 사고 수리비 예측 프로젝트
+        right:
+          description: |
+            - CNN 모델을 활용한 이미지 분류 모델 개발
+            - 91% 정확도 달성
 
   - title: Education
     layout: list
@@ -100,7 +94,7 @@ content:
         caption: 2013 - 2019
         sub_title: 통계학/심리학 학사
 
-   - title: Certificates
+  - title: Certificates
     layout: text
     content: |
       - **Certified Kubernetes Administrator (CNCF)** - 2023.05
