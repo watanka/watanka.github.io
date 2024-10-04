@@ -51,8 +51,8 @@ content:
             - 기존 보험청구 처리 시스템과 연동하여 AI 백엔드 서버 개발
             - 모델 학습 파이프라인 구성 및 최종 모델 정확도 90% 달성
             - nginx, docker, github action을 통한 무중단 배포 구현
-
-      - layout:
+      
+      - layout: left-right
         left:
           title: 애자일소다
           sub_title: 머신러닝 엔지니어
@@ -68,7 +68,7 @@ content:
             - 손글씨 인식률 4% 개선을 위한 semi-supervised learning 기법 적용
             - 손글씨 인식률 개선을 위한 데이터 수집 자동화
           
-      - layout:
+      - layout: left-right
         left:
           title: 애자일소다
           sub_title: 머신러닝 엔지니어 인턴
