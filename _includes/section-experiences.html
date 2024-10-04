@@ -1,0 +1,47 @@
+<!-- _includes/projects-section.html -->
+<div id="experiences-section">
+    <div class="experiences-description">
+      <h2>머신러닝 엔지니어 @펫핀스<span class="duration">2024.02 ~ 2024.08</span></h2>
+      <p class="explanation">반려동물 진료비 예측 서비스 개발[link]</p>
+    </div>
+    <div class="experiences-details">
+      <p>펫핀스는 강아지 보험 웹사이트입니다. 등록된 반려견 건강 정보를 기반으로 평균 진료비를 예측하는 프로젝트를 진행했습니다.</p>
+      <ul>
+        <li>기존 보험청구 처리 시스템과 연동하여 치료비 예측 시스템을 기획단계부터 AI 백엔드 서버 개발까지 담당</li>
+        <li>머신러닝 모델 학습 파이프라인을 구성하여 다양한 모델 후보군을 실험하고 최종 모델 정확도 90%를 달성</li>
+        <li>Mlflow로 모델 재학습 결과를 모니터링하고, nginx, docker, github action을 활용한 롤링 업데이트를 통해 무중단 배포 구현</li>
+      </ul>
+    </div>
+  </div>
+  
+  <style>
+    #experiences-section {
+      display: grid;
+      grid-template-columns: 30% 70%; /* 왼쪽은 30%, 오른쪽은 70%로 설정 */
+      grid-gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .experiences-description {
+      grid-column: 1;
+      text-align: center; /* 제목과 프로젝트 설명 부분 왼쪽 정렬 */
+    }
+    
+    .experiences-details {
+      grid-column: 2;
+      text-align: left; /* 세부사항은 오른쪽 열에 배치 */
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+
+    .explanation {
+      color: #666;
+    }
+
+    .duration {
+      font-size: small;
+      color:bisque
+    }
+  </style>
