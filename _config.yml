@@ -100,17 +100,13 @@ content:
         caption: 2013 - 2019
         sub_title: 통계학/심리학 학사
 
-  - title: Certificates
-    layout: list
-    content:
-      - layout: left
-        title: Certified Kubernetes Administrator (CKA)
-      - layout: left
-        title: SQLD
-      - layout: left
-        title: AWS Cloud Practitioner
-      - layout: left
-        title: 빅데이터 분석기사
+   - title: Certificates
+    layout: text
+    content: |
+      - **Certified Kubernetes Administrator (CNCF)** - 2023.05
+      - **SQLD (한국데이터산업진흥원)** - 2022.10
+      - **AWS Cloud Practitioner (AWS)** - 2021.12
+      - **빅데이터 분석기사 (한국산업인력공단)** - 2022.07
 
   - title: ExtraCurricular
     layout: list
@@ -120,13 +116,6 @@ content:
         caption: 2022 - 현재
         description: |
           다양한 직군의 개발자들과 개발 관련 정보를 교류하고, 기술 블로그를 운영 중입니다.
-
-      - layout: left
-        title: 개인 기술 블로그
-        caption: 2022 - 현재
-        description: |
-          개발 과정에서 배우고 겪은 내용을 정리한 기술 블로그를 운영하고 있습니다. 
-          - [블로그 링크](https://example.com) 
 
 # Footer
 footer_show_references: true
