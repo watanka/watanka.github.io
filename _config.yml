@@ -61,7 +61,6 @@ content:
     content:
       - layout: left
         title: 펫핀스
-        link: www.petpins.com
         sub_title: 머신러닝 엔지니어
         caption: 2024.02 - 2024.08
         description: |
@@ -71,7 +70,6 @@ content:
 
       - layout: left
         title: 애자일소다
-        link: www.agilesoda.com
         sub_title: 머신러닝 엔지니어
         caption: 2020.07 - 2023.01
         description: |
@@ -82,7 +80,6 @@ content:
 
       - layout: left
         title: 애자일소다
-        link: www.agilesoda.com
         sub_title: 머신러닝 엔지니어 인턴
         caption: 2019.08 - 2020.02
         description: |
