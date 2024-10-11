@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
-  url: 'https://silver-archive.com',
+  url: 'https://watanka.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
