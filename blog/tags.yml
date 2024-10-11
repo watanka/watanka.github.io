@@ -1,0 +1,39 @@
+facebook:
+  label: Facebook
+  permalink: /facebook
+  description: Facebook tag description
+
+hello:
+  label: Hello
+  permalink: /hello
+  description: Hello tag description
+
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Docusaurus tag description
+
+hola:
+  label: Hola
+  permalink: /hola
+  description: Hola tag description
+
+ml:
+  label: ML
+  permalink: /ml
+  description: 머신러닝, AI 관련 내용들. 
+
+software:
+  label: Software
+  permalink: /software
+  description: 백엔드, devops 등 소프트웨어 관련 내용들.
+
+life:
+  label: life
+  permalink: /life
+  description: 일상, 떠오른 생각들.
+
+side-project:
+  label: Side Project
+  permalink: side-project
+  description: 사이드 프로젝트에 대한 내용 공유
