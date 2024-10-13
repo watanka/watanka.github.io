@@ -1,5 +1,5 @@
 ---
-slug: 글또-10기-다짐글
+slug: /글또-10기-다짐글
 title: 글또 10기 다짐글
 authors: eunsung
 tag: life
