@@ -28,6 +28,16 @@ const config: Config = {
     locales: ['ko', 'en'],
   },
 
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-R4558EgQNVbHpLSsryo21eodTWzbPVhtQWsNxFfW1ldxnZfE6EGGkhwn0uqAxsD3',
+      crossorigin: 'anonymous',
+    },
+  ],
+
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -40,8 +50,12 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
+          remarkPlugins: [require('remark-math')],
+          rehypePlugins: [require('rehype-katex')],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: { default: '최근 포스트', all: '모든 블로그 포스트' },
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices

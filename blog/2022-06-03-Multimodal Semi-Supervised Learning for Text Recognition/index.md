@@ -1,3 +1,11 @@
+---
+slug: multimodal-supervised-learning-for-text-recognition
+title : 'Multimodal Semi-Supervised Learning for Text Recognition'
+authors : eunsung
+tag: ml
+---
+
+
 # Introduction
 
 이번에 리뷰할 페이퍼는 Multimodal Semi-Supervised Learning for Text Recognition이다. 2022년 AWS AI Lab에서 나온 ‘Multimodal’과 ‘Semi-Supervised’가 키워드인 텍스트 인식 모델이다. 우선 ‘Multimodal’부터 살펴보자.

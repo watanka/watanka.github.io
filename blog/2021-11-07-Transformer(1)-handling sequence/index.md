@@ -1,3 +1,11 @@
+---
+slug: transformer-handling-sequence
+title : 'Transformer - handling sequence'
+authors : eunsung
+tag: ml
+---
+
+
 ## 서론
 
 Transformer([Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)) 논문이 나온지도 벌써 4년이 지났다. 어마무시한 성능을 자랑하는 Transformer는 안 쓰이는 곳을 찾기 힘들 정도로 거의 모든 분야의 최신 기술로 스며들고 있다. 이번 Transformer 1편에서는 시퀀스 데이터를 처리하기 위해서 고안된 시퀀스 모델들, RNN, LSTM, Seq2Seq, Attention을 활용한 Seq2Seq, 그리고 마지막으로 Self-Attention에 대해서 간략히 알아보고자 한다.  나는 시퀀스 데이터에 대한 배경 지식이 거의 없다. 그래서, Transformer 구조를 바로 살펴보는 것보다는 시퀀스 데이터들을 처리하기 위해서 어떠한 시도들과 문제점들이 있었는지를 이해하고, 그 문제점들을 Transformer는 어떤 식으로 해결하는지 알아보면 조금 더 와닿을 것 같다는 생각에서 본 글을 작성하게 되었다. 이 글의 최종 목적지는 Vision Transformer에 대한 올바른 이해이며,  Transformer 2편에서는 Transformer가 내 관심분야인 컴퓨터 비젼 영역(더 정확히는 OCR)에서  어떻게 적용되었는지 알아보려고 한다.

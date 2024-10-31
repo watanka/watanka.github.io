@@ -1,6 +1,11 @@
-## Intro
-
 ---
+slug: unet
+title : 'unet'
+authors : eunsung
+tag: ml
+---
+
+## Intro
 
 - Image Segmentation Model(이미지 분할 모델)은 픽셀 단위의 클래스 분류를 통해 이미지 내 물체를 탐지하는 모델이다.
 
