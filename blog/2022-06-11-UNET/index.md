@@ -44,7 +44,7 @@ $(L_{featuremap} - L_{kernelsize}+2L_{padding}) / L_{stride} + 1 = (572 - 3 + 2*
 
 그리고 한가지 주목할 점은 내려갈 때(downstream) 각 층의 마지막 피쳐맵이 보존되었다가, U자 모양에서 마주보고 있는 올라갈 때(upstream)의 featuremap과 결합(skip architecture)된다는 점이다. 예를 들어서, 첫번째 층의 마지막 피쳐맵(hxwxc = 568x568x64)은 동일한 높이의 맨 마지막 층의 피쳐맵(hxwxc=392x392x128)과 합쳐진다. 피쳐맵의 크기가 서로 다르기 때문에 더 큰 왼쪽의 피쳐맵 사이즈를 오른쪽의 피쳐맵 사이즈와 맞게 잘라준다. (e.g 568 ⇒ 392) 이렇게 서로 먼 위치의 피쳐맵을 더해주는 것은 초기 연산 단계(얕은 층, low-level)의 피쳐맵이 후기 연산 단계(깊은 층, high level)에까지 골고루 영향을 미치도록 설계한 구조이다. ResNet에서 residual layer(skip connection)로 가중치 소실 문제를 해결한 것과 비슷한 맥락이라고 생각하면 된다.
 
-![residual layer; layer를 거치면서 소실될 수도 있는 가중치를 identity layer로 뒷단에 다시 한번 더함으로써 gradient vanishing 문제를 어느정도 해소한다.](스크린샷_2022-06-11_오전_1.35.53.png)
+![residual layer; layer를 거치면서 소실될 수도 있는 가중치를 identity layer로 뒷단에 다시 한번 더함으로써 gradient vanishing 문제를 어느정도 해소한다.](스크린샷_2022-06-11_오전_13553.png)
 
 residual layer; layer를 거치면서 소실될 수도 있는 가중치를 identity layer로 뒷단에 다시 한번 더함으로써 gradient vanishing 문제를 어느정도 해소한다.
 
@@ -68,7 +68,7 @@ e.g)갈색 : 소| 분홍색 : 나무|초록색 : 잔디| 파랑색 : 하늘
 
 - 의학 데이터에는 3D 데이터(volumetric)가 많이 존재한다. MRI는 대표적인 3D 데이터이다. 3D 데이터를 2D로 자르지 않고, 3D 자체로 사용해야하는 이유는 2D로 자르면 중복되는 정보가 많고, 3D 데이터로 구성되어 있을 때여야만 의미있는 데이터일 경우가 많기 때문이다. 예를 들어서, MRI로 촬영한 복부 사진의 단면 이미지들보다 온전한 3D 이미지 한 장일 때 더 유용한 정보인 것과 같다.
 
-![MRA(Magnetic Resonance Angiography)로 스캔한 동맥 3D 이미지.](스크린샷_2022-06-12_오전_1.10.56.png)
+![MRA(Magnetic Resonance Angiography)로 스캔한 동맥 3D 이미지.](스크린샷_2022-06-12_오전_11056.png)
 
 MRA(Magnetic Resonance Angiography)로 스캔한 동맥 3D 이미지.
 
@@ -84,7 +84,7 @@ MRA(Magnetic Resonance Angiography)로 스캔한 동맥 3D 이미지.
 3. 이미지 시퀀스를 타겟 오브젝트에 다시 투사해서 복원하는 과정에서 그림자와 같은 얼룩이 발생하는데, 이를 학습가능한 filtration(여과 연산)으로 개선한다. 
 4. 학습가능한 재구축(learnable reconstruction algorithm) 알고리즘을 통해 3D 이미지로 아웃풋을 도출한다. 다양한 방향에서 선형 backprojection을 적용한다. 
 
-![이미지 재구축 연산자 ](스크린샷_2022-06-12_오후_2.25.47.png)
+![이미지 재구축 연산자 ](스크린샷_2022-06-12_오후_22547.png)
 
 이미지 재구축 연산자 
 
@@ -96,7 +96,7 @@ MRA(Magnetic Resonance Angiography)로 스캔한 동맥 3D 이미지.
 - R : reconstruction operator using p linear backprojections for directions
 - T : fine-tuning operator (average pooling followed by a learnable normalization followed by the sigmoid activation)
 
-![모델 구조](스크린샷_2022-06-12_오후_8.21.00.png)
+![모델 구조](스크린샷_2022-06-12_오후_82100.png)
 
 모델 구조
 
@@ -114,7 +114,7 @@ path2에서는 3D 인풋 x에서 나온 MIP 이미지들의 **모든 프로젝�
 
 이렇게 아웃풋으로 나온 $\hat{y}_{aux}$ 와 $\hat{y}$ 는 정답지 y와 dice-loss로 학습에 반영된다.
 
-![스크린샷 2022-06-12 오후 8.35.41.png](스크린샷_2022-06-12_오후_8.35.41.png)
+![스크린샷 2022-06-12 오후 8.35.41.png](스크린샷_2022-06-12_오후_83541.png)
 
 ## 마무리
 
