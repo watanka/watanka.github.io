@@ -55,7 +55,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           blogSidebarCount: 'ALL',
-          blogSidebarTitle: { default: '최근 포스트', all: '모든 블로그 포스트' },
+          blogSidebarTitle: 'ALL POSTS',
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
