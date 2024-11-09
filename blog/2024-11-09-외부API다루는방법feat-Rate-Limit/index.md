@@ -41,7 +41,7 @@ class YoutubeAPIRequestHandler(RequestHandler):
 	...
 ```
 
-![[muze-api.png]]
+![노래 검색을 위해 활용할 API가 세 개나 생겼다.](muze-api.png)
 노래 검색을 위해 활용할 API가 세 개나 생겼다.
 그럼 이제 들어오는 요청들을 이 API들에게 어떻게 분배해줄지 설정해주어야한다. 요구사항은 
 1. 결과가 나오지 않을 경우(response.status_code !=200), 다른 API로 요청을 넘긴다.
@@ -50,7 +50,7 @@ class YoutubeAPIRequestHandler(RequestHandler):
 로 정리가 가능하다.
 
 이 요구사항을 충족시키는 방법은 Token Bucket알고리즘을 활용하여 Rate Limiting을 적용하는 방법이다.
-![[TokenBucketAlgorithm.png]]
+![TokenBucketAlgorithm.png](TokenBucketAlgorithm.png)
 
 토큰 버킷 알고리즘은 토큰을 기록하여 사용량을 조절한다. 토큰은 시간에 따라 일정량씩 채워지고, 등록된 함수의 호출 시점에 토큰을 사용한다. 만약 시간당 채워지는 토큰보다 더 많은 호출이 이뤄지면 잠시동안 함수 호출이 멈추는 원리이다.
 
