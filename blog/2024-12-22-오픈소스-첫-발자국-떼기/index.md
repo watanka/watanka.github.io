@@ -118,6 +118,7 @@ class TestDurationField(unittest.TestCase):
 
 ### Pull Request 작성하기
 테스트도 무사히 잘 통과하니, 이제 마지막으로 메인 리포지토리에 풀리퀘스트를 날려준다!! PR에는 어떤 문제를 찾았고, 그 문제를 해결하기 위해 어떤 변경사항을 적용했는지 코드를 보지 않더라도 의도와 변경사항이 명확히 전달될 수 있도록 작성하는 게 중요하다. 작성한 [PR](https://github.com/joke2k/django-faker/pull/35)은 여기에서 확인 가능하다. 
+![PR작성](PR_screenshot.png)
 
 <br></br>
 <br></br>
