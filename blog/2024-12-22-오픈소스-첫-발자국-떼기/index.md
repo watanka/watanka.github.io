@@ -25,17 +25,17 @@ tag: side-project
 - **어떤 오픈소스를 고를 것인가?** 
 	=> 대단한 게 아니여도 된다. 비교적 코드가 복잡하지 않은 리포지토리부터 시작해보자
 - **시작을 어떻게 하면 좋을까?** 
-	=> 자주 사용하는 라이브러리 또는 프레임워크
-	=> 리포지토리의 이슈 항목을 살펴보자. 보통 오픈소스는 컨트리뷰트를 어디서부터 시작하면 좋을지 안내하는 good first issue 라벨이 있다.
-	=> 전체 코드를 한 번에 이해하려 하지 말고, 관심있는 컴포넌트를 하나 선택해서 거기서부터 시작하는 게 좋다.
+	=> 자주 사용하는 라이브러리 또는 프레임워크  
+	=> 리포지토리의 이슈 항목을 살펴보자. 보통 오픈소스는 컨트리뷰트를 어디서부터 시작하면 좋을지 안내하는 good first issue 라벨이 있다.  
+	=> 전체 코드를 한 번에 이해하려 하지 말고, 관심있는 컴포넌트를 하나 선택해서 거기서부터 시작하는 게 좋다.  
 - **어떻게 코드를 읽어야할지?**
-	=> 우선 README부터 읽기
-	=> 시작 포인트를 찾아서 거기서부터 타고들어갈 것
-	=> 한줄 한줄 다 읽어볼 것
-	=> 리포지토리의 TODO 부분을 확인하고 기여할 수 있는 부분을 확인해볼 것
-	=> 테스트 코드 활용하기
-	=> 코드를 읽다가 이해가 안되는 부분이 있다면, 관련 PR을 찾아보는 것도 방법
-([배두식님의 PyCon KR 2023 오픈소스와 함께 성장하기](https://www.youtube.com/watch?v=gBjWgCXL4mA)를 참고했다.)
+	=> 우선 README부터 읽기  
+	=> 시작 포인트를 찾아서 거기서부터 타고들어갈 것  
+	=> 한줄 한줄 다 읽어볼 것  
+	=> 리포지토리의 TODO 부분을 확인하고 기여할 수 있는 부분을 확인해볼 것  
+	=> 테스트 코드 활용하기  
+	=> 코드를 읽다가 이해가 안되는 부분이 있다면, 관련 PR을 찾아보는 것도 방법  
+([배두식님의 PyCon KR 2023 오픈소스와 함께 성장하기](https://www.youtube.com/watch?v=gBjWgCXL4mA)를 참고했다.)  
 
 
 <br></br>
@@ -43,10 +43,9 @@ tag: side-project
 
 
 ### 오픈소스 선정하기
-위 팁들을 기반으로 요새 사용중인 웹 프레임워크인 django의 라이브러리 중 `django-faker`라는 라이브러리에 기여해보기로 마음먹었다. 
-`django-faker`는 django model의 값들을 랜덤으로 생성해주는 역할을 한다. 아래는 README에 적힌 django-faker에 대한 설명이다.
-	> _Django-faker_ provides an adapter for Django Models, for easy population of test databases. To populate with Model instances, create a new Populator class, then list the class and number of all of Models that must be generated. To launch the actual data population, call execute() method.
-로직이 자료형에 알맞는 랜덤값만 생성하면 된다는 점에서 코드 파악을 위한 피로감이 다른 리포지토리보다 덜 하지 않을까하는 생각이 들었다. 한 가지 문제는 마지막 update가 2016년... 무려 8년전... 거의 업데이트가 더 이상 없는 라이브러리라는 점이였다. 하지만, 목표가 '오픈소스 기여하기'인만큼 이 또한 좋은 경험이 될 거라는 생각이 들었다. PR에 대한 피드백이 늦을 수 있다는 점만 감안하면 될 듯 했다.
+위 팁들을 기반으로 요새 사용중인 웹 프레임워크인 django의 라이브러리 중 `django-faker`라는 라이브러리에 기여해보기로 마음먹었다.   
+`django-faker`는 django model의 값들을 랜덤으로 생성해주는 역할을 한다.  
+로직이 자료형에 알맞는 랜덤값만 생성하면 된다는 점에서 코드 파악을 위한 피로감이 다른 리포지토리보다 덜 하지 않을까하는 생각이 들었다. 한 가지 문제는 마지막 update가 2016년... 무려 8년전... 거의 업데이트가 더 이상 없는 라이브러리라는 점이였다. 하지만, 목표가 '오픈소스 기여하기'인만큼 이 또한 좋은 경험이 될 거라는 생각이 들었다. PR에 대한 피드백이 늦을 수 있다는 점만 감안하면 될 듯 했다.  
 ![django-faker의 커밋 히스토리](django-faker-commit-history.png)
 
 <br></br>
@@ -76,9 +75,9 @@ README.md를 우선 한 번 훑었다. README에는 어떻게 모듈을 사용�
 우선 보통 기여할 부분을 찾는 방법은 이슈를 살펴보거나, 모듈 사용중에 불편함을 겪은 부분에 대해 개선방법을 제시하는 식으로 진행한다는 점을 기억하자. (우리는 전략적으로 django-faker가 업데이트가 오랫동안 이뤄지지 않았다는 점을 이용하는 거다.) 
 `django-faker`의 마지막 업데이트 일자인 2015년을 기점으로 `django`에는 어떠한 모델 관련 업데이트가 있었는지 확인해보았다.(https://docs.djangoproject.com/en/5.1/releases/)
 여러 변경사항들중에 2.0을 기준으로 시간 간격을 저장하는 `DurationField` 필드가 추가된 것을 확인할 수 있었다! 
-우선 내 계정으로 리포지토리를 fork하고 로컬에 clone했다.
-![repo_fork](repo_fork.png)
-실제로 `django-faker`가 `DurationField`를 처리하지 못하는지 확인할 필요가 있었기 때문에, `DurationField`를 사용하는 모델을 하나 만들고, 테스트 코드를 작성해준다.
+우선 내 계정으로 리포지토리를 fork하고 로컬에 clone했다.  
+![repo_fork](repo_fork.png)  
+실제로 `django-faker`가 `DurationField`를 처리하지 못하는지 확인할 필요가 있었기 때문에, `DurationField`를 사용하는 모델을 하나 만들고, 테스트 코드를 작성해준다.  
 ```python
 class GamePlayTime(models.Model):
 	game = models.ForeignKey(Game, on_delete=models.CASCADE)
@@ -102,14 +101,17 @@ class TestDurationField(unittest.TestCase):
 		insertedPks = populator.execute()
 		self.assertEqual(len(insertedPks[GamePlayTime]), 10)
 ```
+<br></br>
 테스트가 `django-faker`에서 발생하는 AttributeError로 테스트를 통과하지 못 하는 걸 확인했다.
+<br></br>
 ![DurationField에러](DurationField에러.png)
 
 새로운 코드를 반영하기 위한 브랜치를 생성한다. 브랜치 이름은 나름 비장하게 `eature/enhance-django-support` 그리고, 테스트 코드를 통과하기 위해 `FieldTypeGuesser`에 `DurationField`를 처리할 수 있도록 코드를 추가해주었다. (django와 faker의 버젼에 맞춰 코드를 업데이트해줄 필요가 있었는데, 이 부분에서 의외로 시간을 많이 사용했다.)
+<br></br>
 ![DurationHandling코드추가](DurationHandling코드추가.png)
-이렇게 작성한 코드를 바탕으로 테스트를 다시 실행시켜준다. 
-테스트를 잘 통과한다..!
-테스트를 내가 임의로 바꾸는 건 좋지 않은 방법이지만, 오랫동안 관리되지 않은 부분에 대한 업데이트를 적용하기 위한 테스트이기 때문에 우선 적용하기로 했다.
+이렇게 작성한 코드를 바탕으로 테스트를 다시 실행시켜준다.   
+테스트를 잘 통과한다..!  
+테스트를 내가 임의로 바꾸는 건 좋지 않은 방법이지만, 오랫동안 관리되지 않은 부분에 대한 업데이트를 적용하기 위한 테스트이기 때문에 우선 적용하기로 했다.  
 
 
 <br></br>
