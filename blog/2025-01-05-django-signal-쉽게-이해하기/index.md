@@ -3,6 +3,8 @@ slug: django-signal-쉽게-이해하기
 title : 'Django Signal 쉽게 이해하기⚡️'
 authors : eunsung
 tag: software
+toc_min_heading_level: 2
+toc_max_heading_level: 3
 ---
 
 ### Intro
@@ -78,8 +80,8 @@ receiver 데코레이터는 아래 함수가 이벤트 콜백 함수임을 명�
 | **`m2m_changed`** | `ManyToManyField`관계가 변경될 때 발생 |
 | **`pre_migrate`** | 마이그레이션이 실행되기 전에 발생 |
 | **`post_migrate`** | 마이그레이션이 실행된 후에 발생 |
-**Request/Response 관련**
 
+**Request/Response 관련**
 | **Signal** | **설명** |
 | --- | --- |
 | **`request_started`** | HTTP 요청이 시작될 때 발생 |
@@ -190,7 +192,7 @@ class MyAppConfig(AppConfig):
 
 <br></br>
 
-### 어떻게 동작하나요?(내부 동작을 살펴보자)
+### 어떻게 동작하나요?
 
 signal의 동작 방식은 생각보다 단순하다. `django.dispatch.dispatcher.py`의 Signal의 `connect` 함수를 통해 확인 할 수 있다. 
 
@@ -206,14 +208,14 @@ lock이 걸린 상태에서 `connect`함수가 호출될 경우, Signal 인스�
 
 ```python
 if weak:
-  ref = weakref.ref
-  receiver_object = receiver
-  # Check for bound methods
-  if hasattr(receiver, "__self__") and hasattr(receiver, "__func__"):
-      ref = weakref.WeakMethod
-      receiver_object = receiver.__self__
-  receiver = ref(receiver)
-  weakref.finalize(receiver_object, self._remove_receiver)
+    ref = weakref.ref
+    receiver_object = receiver
+    # Check for bound methods
+    if hasattr(receiver, "__self__") and hasattr(receiver, "__func__"):
+        ref = weakref.WeakMethod
+        receiver_object = receiver.__self__
+    receiver = ref(receiver)
+    weakref.finalize(receiver_object, self._remove_receiver)
 ```
 
 <br></br>
