@@ -20,9 +20,9 @@ signal은 django 시스템 실행 중 이벤트가 발생했을 때 실행되는
 
 ### Pub/Sub 구조
 
-<div style="display: flex; align-items: center; gap: 20px;">
-    <img src="police.png" alt="police" style="width: 300px; height: auto;" />
-    <img src="traffic.png" alt="traffic" style="width: 300px; height: auto;" />
+<div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+  <img src="police.png" alt="police" style={{ width: '300px', height: 'auto' }} />
+  <img src="traffic.png" alt="traffic" style={{ width: '300px', height: 'auto' }} />
 </div>
 
 <br></br>
