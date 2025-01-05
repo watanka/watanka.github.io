@@ -20,12 +20,7 @@ signal은 django 시스템 실행 중 이벤트가 발생했을 때 실행되는
 
 ### Pub/Sub 구조
 
-<div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-  <img src="police.png" alt="police" style={{ width: '300px', height: 'auto' }} />
-  <img src="traffic.png" alt="traffic" style={{ width: '300px', height: 'auto' }} />
-</div>
-
-<br></br>
+![police](police.png)
 
 신호등이 없는 나라에 새로 부임받은 교통경찰이 있다. 이 교통경찰은 차량들이 지체없이 통행할 수 있도록 해야한다. 이 교통경찰은 지나가는 차량들을 일일이 붙잡고 멈춰야할 시점과 출발해야하는 시점을 알려준다. 열심히 뛰어다녔지만 혼자서는 버겁다. 그리고 간혹 말이 통하지 않는 외국인이 있는 경우에는 정보 전달을 위해 더 많은 시간이 걸렸다.  차량 퇴근시간이 되어 차량이 많아지자, 교통경찰 혼자서 차량들을 통제하는 일은 점점 더 버거워졌고, 결국은 3중 추돌 사고가 나고 말았다.
 
