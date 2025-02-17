@@ -1,6 +1,6 @@
 ---
 slug: personal_server
-title : '안쓰는 노트북으로 개인 서버 만들기💻'
+title : '안쓰는 노트북으로 개인 서버 만들기💻-네트워크편'
 authors : eunsung
 tag: side-project
 ---
