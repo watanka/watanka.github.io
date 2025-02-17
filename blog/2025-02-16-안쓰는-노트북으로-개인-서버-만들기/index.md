@@ -7,9 +7,7 @@ tag: side-project
 
 얼마전 의도치 않은 AWS 요금 폭탄을 맞고(미리 요금 모니터링을 안 한 내 잘못이 맞ㄷㅏ…), 개인용 pc로 배포 서버를 구성하기로 마음 먹었다. 마침 중고로 팔려고 언젠가부터 창고 한켠에 쳐박아두었던 맥북 프로가 생각났다. 오랫동안 쓰지 않은 터라, 부팅 속도가 느리고, 프로그램 하나만 실행해도 팬 돌아가는 소리가 시끄럽긴 했지만, 꽤 잘 동작한다.  
 
-<div style={{display: 'flex', justifyContent: 'center'}}>
-  <img src="macbook.png" alt="macbook" width="600" />
-</div>
+![macbook.png](macbook.png)
 
 이 맥북을 서버로 사용하기 위해 필요한 작업을 크게 세가지로 정리했다.  
 
@@ -39,34 +37,26 @@ tag: side-project
 
 네트워크 구성을 살펴보면 이렇게 그림으로 정리될 수 있다.
 
-<div style={{display: 'flex', justifyContent: 'center'}}>
-  <img src="network_composition.png" alt="network composition" width="500" />
-</div>
+![network_composition.png](network_composition.png)
 
 <details>
 <summary>네트워크 구성 트러블 슈팅</summary>
     
     우리집 네트워크는 회선이 두 개다. 하나는 내 방에 랜선으로 데스크탑에 연결되어있고, 다른 하나는 거실에 WiFi를 연결할 수 있는 공유기로 연결되어 있다. 회선을 2개를 사용(아니 애시당초 왜 2개 회선인 거지…?)하고 있기 때문에 당연히 나는 구성이 데스크탑과 WIFI가 서로 별개의 네트워크 구성이라고 생각했다. 그림으로 그려보자면,  
     
-    <div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-      <img src="wrong_network_composition.png" alt="wrong network composition" width="450" />
-    </div>
+    ![wrong_network_composition.png](wrong_network_composition.png)
     
     이런 식으로 말이다.  
     
     결론적으로 알게 된 구성의 형태는  
     
-    <div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-      <img src="network_composition.png" alt="network composition" width="450" />
-    </div>
+    ![network_composition.png](network_composition.png)
     
     이런 식이였다.  
     
     35.1 공유기의 포트 포워딩 설정 후에도 외부에서 접속이 불가한 이슈가 있었는데, 한참을 헤매다가 `traceroute 8.8.8.8` 커맨드로 35.1 공유기를 지나친 패킷이 55.1을 거쳐간다는 걸 확인하고 35.1이 55.1에 속해있다는 걸 파악할 수 있었다.  
     
-    <div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-      <img src="traceroute.png" alt="traceroute" width="500" />
-    </div>
+    ![traceroute.png](traceroute.png)
     
     그래서 이 35.1 공유기를 bridge모드로 설정하여 서브넷팅 없이 패킷만 전송하도록 설정하니 외부에서 접속이 가능해졌다.  
     
@@ -85,15 +75,11 @@ tag: side-project
 
 [ip.pe.kr](http://ip.pe.kr)에 접속하면 내 공인 IP를 확인할 수 있다.  
 
-<div style={{display: 'flex', justifyContent: 'center'}}>
-  <img src="public_ip.png" alt="public ip" width="400" />
-</div>
+![public_ip.png](public_ip.png)  
 
 그리고 이제 맥북의 IP를 파악해야한다. 공유기 관리자 페이지(?)에서 확인할 수도 있고, `ifconfig` 를 통해 확인할 수도 있다. 
 
-<div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-  <img src="ifconfig.png" alt="ifconfig" width="500" />
-</div>
+![ifconfig.png](ifconfig.png)
 
 <br></br>
 
@@ -101,38 +87,28 @@ tag: side-project
 
 지금 맥북 주소는 공유기의 DHCP 서버로부터 할당받은 동적 IP이기 때문에, 공유기 관리자 페이지에서 DHCP 서버가 이 맥북에게 고정 IP를 제공할 수 있도록 설정해줘야 한다.  
 
-<div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-  <img src="dhcp_static_ip.png" alt="dhcp static ip" width="600" />
-</div>
+![dhcp_static_ip.png](dhcp_static_ip.png)
 
 <br></br>
 
 
 ### 포트 포워딩하기
 
-<div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-  <img src="port_forwarding.png" alt="port forwarding" width="500" />
-</div>
+![port_forwarding.png](port_forwarding.png)
 
 맥북에서 실행되는 앱을 외부에서 접근할 수 있도록 하려면, 포트 포워딩이 필요하다.   
 
 실제로 앱이 접속가능한지 테스트해보기 위해 간단한 fastapi 앱을 작성해준다.  
 
-<div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-  <img src="simple_app.png" alt="simple app" width="450" />
-</div>
+![simple_app.png](simple_app.png)
 
 그리고, 공유기 관리자 페이지에서 외부에서 해당 포트로 접속했을 경우 맥북 IP의 로컬 포트로 연결받을 수 있도록 설정을 추가해준다.  
 
-<div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-  <img src="port_forwarding_page.png" alt="port forwarding page" width="600" />
-</div>
+![port_forwarding_page.png](port_forwarding_page.png)
 
 그럼 이제 외부 IP의 8000번 포트로 접속이 성사되는 걸 확인할 수 있다.  
 
-<div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-  <img src="ip_sample_success.png" alt="ip sample success" width="450" />
-</div>
+![ip_sample_success.png](ip_sample_success.png)
 
 <br></br>
 
@@ -150,9 +126,7 @@ tag: side-project
 
 이제 dDNS에서 할당받은 hostname으로 맥북에 실행시켜둔 앱이 정상적으로 동작하는 걸 확인할 수 있다.  
 
-<div style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
-  <img src="ddns_sample_success.png" alt="ddns sample success" width="450" />
-</div>
+![ddns_sample_success.png](ddns_sample_success.png)
 
 <br></br>
 
