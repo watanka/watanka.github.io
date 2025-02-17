@@ -3,6 +3,8 @@ slug: maple_price
 title : '메이플랜드의 시세는 어떻게 결정되는 걸까🍁'
 authors : eunsung
 tag: side-project
+toc_min_heading_level: 2
+toc_max_heading_level: 3
 ---
 
 

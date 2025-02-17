@@ -3,6 +3,8 @@ slug: personal_server
 title : '안쓰는 노트북으로 개인 서버 만들기💻-네트워크편'
 authors : eunsung
 tag: side-project
+toc_min_heading_level: 2
+toc_max_heading_level: 3
 ---
 
 얼마전 의도치 않은 AWS 요금 폭탄을 맞고(미리 요금 모니터링을 안 한 내 잘못이 맞ㄷㅏ…), 개인용 pc로 배포 서버를 구성하기로 마음 먹었다. 마침 중고로 팔려고 언젠가부터 창고 한켠에 쳐박아두었던 맥북 프로가 생각났다. 오랫동안 쓰지 않은 터라, 부팅 속도가 느리고, 프로그램 하나만 실행해도 팬 돌아가는 소리가 시끄럽긴 했지만, 꽤 잘 동작한다.  
