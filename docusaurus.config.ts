@@ -77,6 +77,41 @@ const config: Config = {
         trackingID: 'G-BYF98EMW7Y',
       },
     ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: [
+          '/tags/**',
+          '/archive/**',
+          '/search/**',
+          '/404.html',  
+          '/*.js',
+          '/*.jsx',
+          '/*.ts',
+          '/*.tsx',
+        ],
+        filename: 'sitemap.xml',
+        transformSitemapUrlset: async (sitemapUrlset) => {
+          const urls = sitemapUrlset.getElementsByTagName('url');
+          
+          Array.from(urls).forEach((url) => {
+            const loc = url.getElementsByTagName('loc')[0].textContent;
+            const priority = url.getElementsByTagName('priority')[0];
+            const changefreq = url.getElementsByTagName('changefreq')[0];
+            
+            // 메인 페이지
+            if (loc === 'https://watanka.github.io/') {
+              priority.textContent = '1.0';
+              changefreq.textContent = 'daily';
+            }
+          });
+          
+          return sitemapUrlset;
+        },
+      },
+    ],
   ],
   themeConfig: {
     // Replace with your project's social card
