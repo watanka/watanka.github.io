@@ -70,6 +70,14 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-BYF98EMW7Y',
+      },
+    ],
+  ],
   themeConfig: {
     // Replace with your project's social card
     metadata: [
