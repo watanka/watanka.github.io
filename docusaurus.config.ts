@@ -86,30 +86,13 @@ const config: Config = {
           '/tags/**',
           '/archive/**',
           '/search/**',
-          '/404.html',  
+          '/404.html',
           '/*.js',
           '/*.jsx',
           '/*.ts',
           '/*.tsx',
         ],
         filename: 'sitemap.xml',
-        transformSitemapUrlset: async (sitemapUrlset) => {
-          const urls = sitemapUrlset.getElementsByTagName('url');
-          
-          Array.from(urls).forEach((url) => {
-            const loc = url.getElementsByTagName('loc')[0].textContent;
-            const priority = url.getElementsByTagName('priority')[0];
-            const changefreq = url.getElementsByTagName('changefreq')[0];
-            
-            // 메인 페이지
-            if (loc === 'https://watanka.github.io/') {
-              priority.textContent = '1.0';
-              changefreq.textContent = 'daily';
-            }
-          });
-          
-          return sitemapUrlset;
-        },
       },
     ],
   ],
