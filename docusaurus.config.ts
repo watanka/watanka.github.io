@@ -66,6 +66,21 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: [
+            '/tags/**',
+            '/archive/**',
+            '/search/**',
+            '/404.html',
+            '/*.js',
+            '/*.jsx',
+            '/*.ts',
+            '/*.tsx',
+          ],
+          filename: 'sitemap.xml',
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -75,24 +90,6 @@ const config: Config = {
       '@docusaurus/plugin-google-gtag',
       {
         trackingID: 'G-BYF98EMW7Y',
-      },
-    ],
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5,
-        ignorePatterns: [
-          '/tags/**',
-          '/archive/**',
-          '/search/**',
-          '/404.html',
-          '/*.js',
-          '/*.jsx',
-          '/*.ts',
-          '/*.tsx',
-        ],
-        filename: 'sitemap.xml',
       },
     ],
   ],
