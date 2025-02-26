@@ -97,6 +97,10 @@ const config: Config = {
     // Replace with your project's social card
     metadata: [
       {
+        name: 'google-adsense-account',
+        content: 'ca-pub-3555505602575174'
+      },
+      {
         name: 'keywords',
         content: 'tech blog, 기술 블로그, AI 개발자, ML, 딥러닝, 백엔드',
       },
