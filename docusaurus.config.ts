@@ -74,12 +74,12 @@ const config: Config = {
     // Replace with your project's social card
     metadata: [
       {
-        name: 'google-site-verification',
-        content: '_acVfKFvDEQmI_A11vW61seMT4vJueeOjHLLLifNHVc'
-      },
-      {
         name: 'keywords',
         content: 'tech blog, 기술 블로그, AI 개발자, ML, 딥러닝, 백엔드',
+      },
+      {
+        name: 'description',
+        content: 'AI 백엔드 개발자의 좌충우돌 개발기록',
       },
     ],
     image: 'img/profile.jpg',
