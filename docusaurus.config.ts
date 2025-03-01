@@ -66,12 +66,49 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: [
+            '/tags/**',
+            '/archive/**',
+            '/search/**',
+            '/404.html',
+            '/*.js',
+            '/*.jsx',
+            '/*.ts',
+            '/*.tsx',
+          ],
+          filename: 'sitemap.xml',
+        },
       } satisfies Preset.Options,
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-BYF98EMW7Y',
+      },
+    ],
+  ],
   themeConfig: {
     // Replace with your project's social card
+    metadata: [
+      {
+        name: 'google-adsense-account',
+        content: 'ca-pub-3555505602575174'
+      },
+      {
+        name: 'keywords',
+        content: 'tech blog, 기술 블로그, AI 개발자, ML, 딥러닝, 백엔드',
+      },
+      {
+        name: 'description',
+        content: 'AI 백엔드 개발자의 좌충우돌 개발기록',
+      },
+    ],
     image: 'img/profile.jpg',
     navbar: {
       title: 'Silver Archive',
