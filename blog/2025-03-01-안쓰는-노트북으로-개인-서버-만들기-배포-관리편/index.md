@@ -72,7 +72,7 @@ id_rsa를 발급받고 id_rsa.pub을 서버에 심는다. (이 내용도 검색�
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
 
-![노트북의 절전 모드를 끈다](laptop-settings.png)
+![노트북의 절전 모드를 끈다](laptop-setting.png)
 이제 이 서버(노트북이였던)는 더 이상 절전모드에 들어가지 않는다.(노트북 수명 byebye)  
 
 그리고 이어서 노트북 덮개를 덮어도 꺼지지 않도록 설정한다. etc 디렉토리의 `logind.conf` 에 들어가서 그림 아래 두 설정들을 ignore로 바꿔준다.  
