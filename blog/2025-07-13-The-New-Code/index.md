@@ -2,7 +2,7 @@
 slug: the-new-code
 title: "The New Code"
 authors: eunsung
-tags: Software
+tags: software
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 description: "OpenAI의 Sean Grove의 스피치 The New Code를 듣고 느낀 내용을 정리했습니다. Agent 시대에 새로운 코드의 모습이 어떨지 상상해보는 시간이였습니다."
